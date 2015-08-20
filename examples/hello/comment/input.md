@@ -7,8 +7,3 @@ a few different varieties:
 
 {comment.play}
 
-### See also:
-
-[Library documentation][docs]
-
-[docs]: /meta/doc.html

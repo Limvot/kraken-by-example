@@ -1,17 +1,15 @@
-# Rust by Example
+# Kraken by Example
 
-[Rust][rust] is a modern systems programming language focusing on safety and
-speed. It accomplishes these goals by being memory safe without using garbage
-collection.
+[Kraken][kraken] is a work-in-progress systems programming language designed to be uncommonly flexible.
 
-Rust by Example is a collection of examples that illustrate various Rust
-concepts and the standard libraries. You can also [check out the source code
+Kraken by Example is a set of examples intended to demonstrate how to program in Kraken.
+You can also [check out the source code
 for this site][home].
 
-Be sure to have Rust [installed][install] and the [docs][std] at hand, and
-let's start!
+To make this site, I forked the wonderful rust-by-example website.
+I owe a deep debt of gratitude to the fantastic Rust people for making and opensourcing cool
+web tools to show off a programming language, as web programming is definity not my area.
 
-[rust]: http://www.rust-lang.org/
-[install]: http://www.rust-lang.org/install.html
-[std]: http://doc.rust-lang.org/std/
-[home]: https://github.com/rust-lang/rust-by-example
+
+[kraken]: http://www.kraken-lang.org/
+[home]: https://github.com/Limvot/kraken-by-example

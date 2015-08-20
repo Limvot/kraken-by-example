@@ -1,0 +1,9 @@
+import io:*
+import string:*
+
+fun main(): int {
+    print(1) // you can print numbers
+    println(" comes right after the 1") // and string literals
+    println(string("this is coming from a string object")) // and string objects
+    return 0
+}

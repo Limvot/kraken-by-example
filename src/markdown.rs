@@ -58,7 +58,7 @@ impl<'a, 'b> Markdown<'a, 'b> {
     fn insert_sources(&mut self) -> Result<(), String> {
         let id = self.id;
         let prefix = self.prefix;
-        let re = Regex::new(r"\{(.*\.rs)\}").unwrap();
+        let re = Regex::new(r"\{(.*\.krak)\}").unwrap();
 
         let mut table = Vec::new();
         for line in self.content.lines() {
@@ -107,7 +107,7 @@ impl<'a, 'b> Markdown<'a, 'b> {
                     let s = try!(file::run(prefix, id, src));
 
                     let s = format!("``` \n\
-                                    $ rustc {0}.rs && ./{0}\n{1}\n\
+                                    $ rustc {0}.krak && ./{0}\n{1}\n\
                                     ```",
                                     src, s);
 
@@ -143,7 +143,7 @@ impl<'a, 'b> Markdown<'a, 'b> {
 
                     let srcbase = captures.at(1).unwrap();
                     let input = format!("{{{}.play}}", srcbase);
-                    let src = format!("{}.rs", srcbase);
+                    let src = format!("{}.krak", srcbase);
                     let p = format!("examples/{}/{}/{}", prefix, id, src);
 
                     let mut f = File::open(&Path::new(&p)).unwrap();

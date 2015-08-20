@@ -1,0 +1,23 @@
+import io:*
+
+fun main():int {
+    // Variables can be type annotated.
+    var logical: bool = true
+    // or not
+    var other_logical = false
+
+    var a_float: float = 1.0  // Regular annotation
+    var another_float = 5.7f // Suffix annotation
+    // Or a default will be used.
+    var default_float   = 3.0 // double
+
+    var default_integer = 7   // int
+
+    println(a_float)
+    println(another_float)
+    println(default_float)
+
+    println(default_integer)
+
+    return 0
+}

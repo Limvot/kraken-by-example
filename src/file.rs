@@ -23,7 +23,7 @@ pub fn run(prefix: &str, id: &str, src: &str) -> Result<String, String> {
 
     match Command::new("rustc")
         .current_dir(&Path::new(path_str))
-        .arg(&format!("{}.rs", src))
+        .arg(&format!("{}.krak", src))
         .arg("--out-dir")
         .arg(&out_dir)
         .output() {
