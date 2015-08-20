@@ -2,20 +2,19 @@ This is the source code of the traditional Hello World program.
 
 {hello.play}
 
-`println!` is a [*macro*][macros] that prints text to the
+`println` is a function that prints text to the
 console.
 
-A binary can be generated using the Rust compiler: `rustc`.
+A binary can be generated using the Kraken compiler: `kraken`.
 
 ```
-$ rustc hello.rs
+$ kraken hello.krak
 ```
 
-`rustc` will produce a `hello` binary that can be executed.
+`kraken` will produce a `hello` binary that can be executed.
 
 ```
 $ ./hello
 Hello World!
 ```
 
-[macros]: ./macros.html
