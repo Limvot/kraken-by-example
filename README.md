@@ -1,13 +1,14 @@
 [![Build Status][travis-image]][travis-link]
-# Rust by Example
+# Kraken by Example
 
 ## What's this?
 
-This is the source code of the [Rust by Example][website] website!
+This is the source code of the [Kraken by Example][website] website!
+Forked directly from Rust by Example - many thanks to them!
 
 ## How to contribute
 
-See [CONTRIBUTING.md][how-to-contribute].
+Just send pull requests!
 
 ## How to generate the static site
 
@@ -98,7 +99,7 @@ The Makefile provides the following recipes:
 
 ## License
 
-Rust by Example is dual-licensed under the Apache 2.0 license and the MIT
+Kraken by Example is dual-licensed under the Apache 2.0 license and the MIT
 license.
 
 See LICENSE-APACHE and LICENSE-MIT for more details.
