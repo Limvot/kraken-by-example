@@ -1,0 +1,23 @@
+import io:*
+
+obj DoesNotHaveTrait {}
+obj HasTrait (Trait) {}
+
+obj InstantiateMe<T> { fun do() { println("no trait"); } }           // InstantiateMe<DoesNotHaveTrait>
+obj InstantiateMe<T(Trait)> { fun do() { println("trait"); } }    // InstantiateMe<DoesHaveTrait>
+
+fun runMe<T>(pram: T) { println("no trait"); }          // runMe<DoesNotHaveTrait>()
+fun runMe<T(Trait)>(pram: T) { println("trait"); }      // runMe<DoesHaveTrait>()
+
+fun main(): int {
+    var no: DoesNotHaveTrait
+    var yes: HasTrait
+    var noObj: InstantiateMe<DoesNotHaveTrait>
+    var yesObj: InstantiateMe<HasTrait>
+    noObj.do()
+    yesObj.do()
+    runMe(no)
+    runMe(yes)
+    return 0
+}
+

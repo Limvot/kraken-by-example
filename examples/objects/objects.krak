@@ -1,0 +1,63 @@
+import io:*
+
+// lets start simple
+obj basically_a_struct {
+    var a: int
+    var b: float
+    // lets put in a method
+    fun print_member() {
+        println(a)
+    }
+
+}
+
+import io:*
+import vector:*
+
+fun real_object(data: int): real_object {
+    var to_ret.construct(): real_object
+    to_ret.a.add(data)
+    return to_ret
+}
+
+obj real_object (Object) {
+    var a: vector&lt;int&gt;
+    fun construct(): *real_object {
+        a.construct()
+        return this
+    }
+    fun copy_construct(old: *real_object) {
+        a.copy_construct(&amp;old-&gt;a);
+    }
+    fun destruct() {
+        a.destruct()
+    }
+    fun operator=(other: ref real_object) {
+        destruct()
+        copy_construct(&amp;other)
+    }
+    fun operator==(other: ref real_object): bool {
+        return a == other.a
+    }
+    fun operator+(other: int): bool {
+        println("you want to add a real_object and an int?")
+        return false
+    }
+}
+
+fun main():int {
+    var my_obj: basically_a_struct
+    my_obj.a = 9
+    my_obj.b = 4.2
+    var my_obj_ptr: *basically_a_struct = &my_obj
+    println(my_obj_ptr->a)
+
+    my_obj.print_member()
+    my_obj_ptr->print_member()
+
+    var my_real_obj = real_object(71)
+    println(my_real_obj + 12)
+
+    return 0
+}
+

@@ -3,5 +3,14 @@
         { "id": "comment", "title": "Comments", "children": null },
         { "id": "print", "title": "Formatted print", "children": null }
     ] },
-    { "id": "primitives", "title": "Primitives", "children": null }
+    { "id": "primitives", "title": "Primitives", "children": null },
+    { "id": "basics", "title": "Basics", "children": null },
+    { "id": "mutually_recursive_definitions", "title": "Muturally Recursive Definitions", "children": null },
+    { "id": "multiline_strings", "title": "Multiline Strings", "children": null },
+    { "id": "lambdas", "title": "Lambdas", "children": null },
+    { "id": "generics", "title": "Generics", "children": null },
+    { "id": "adts", "title": "ADTs", "children": null },
+    { "id": "objects", "title": "Objects", "children": null },
+    { "id": "traits", "title": "Traits", "children": null },
+    { "id": "ffi", "title": "FFI", "children": null }
 ]

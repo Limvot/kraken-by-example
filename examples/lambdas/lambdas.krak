@@ -1,0 +1,15 @@
+import io:*
+
+fun main():int {
+    var a_lambda: fun(int): int = fun(input: int): int {
+        return input + 7
+    }
+    println(a_lambda(5))
+
+    // or more minimal
+    var second_lambda = fun(input: int): int return input - 7;
+    println(second_lambda(5))
+    return 0
+}
+
+

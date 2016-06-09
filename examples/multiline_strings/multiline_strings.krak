@@ -1,0 +1,12 @@
+import io:*
+
+fun main(): int {
+    println("Hello, world!
+    multi line! yeah!")
+    println("""
+    or triple quoted strings with internal
+    quotes like this: "Hi Dave"
+    """)
+    return 0
+}
+

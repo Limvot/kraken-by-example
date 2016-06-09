@@ -1,6 +1,8 @@
 [![Build Status][travis-image]][travis-link]
 # Kraken by Example
 
+[![Build Status][travis-image]][travis-link]
+
 ## What's this?
 
 This is the source code of the [Kraken by Example][website] website!
@@ -33,7 +35,7 @@ Run:
 
 ```
 make all
-make book
+make html pdf epub
 make test
 ```
 
@@ -96,6 +98,11 @@ The Makefile provides the following recipes:
 * `make serve`: runs `gitbook --serve` to generate the book and publishes it
   under `localhost:4000`
 * `make test`: will check all the rust source files for compilation errors
+
+## Translations to other languages
+
+* [Chinese](https://github.com/rust-lang-cn/rust-by-example-cn)
+* [Japanese](https://github.com/rust-lang-ja/rust-by-example-ja)
 
 ## License
 

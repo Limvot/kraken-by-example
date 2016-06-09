@@ -15,7 +15,7 @@ not clear". The example id is the relative path in the URL without the html
 extension, e.g. URL: `http://rustbyexample.com/variables/scope.html` -> id:
 `variables/scope`
 
-If its something simple like a typo, you can send a PR directly.
+If it's something simple like a typo, you can send a PR directly.
 
 # Sending a PR for a small fix
 
@@ -64,7 +64,7 @@ See the [README][readme] for details about how the static site is generated.
 
 ## Markdown (.md)
 
-* Lines should contain a maximum of 79 characters.
+* Lines should contain a maximum of 99 characters.
 * Use reference style hyperlinks, for example:
 
 Instead of:
@@ -80,7 +80,7 @@ Use:
 
 ## Rust code (.rs)
 
-* Lines should contain a maximum of 79 characters.
+* Lines should contain a maximum of 99 characters.
 * In comments, types, methods, macros and variables should be wrapped in
   backticks, e.g. ``` `println!` ```
 

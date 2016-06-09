@@ -1,0 +1,15 @@
+
+// using an extern declaration
+ext fun printf(fmt: *char, ...): int
+
+fun main(): int {
+    var some_int = 90
+    var out: float
+    simple_passthrough(some_int:out:) """
+        printf("hello %d\\\\n", some_int);
+        float out = 7.7;
+    """
+    printf("now we can use C's printf (though we should not) %f", out)
+    return 0
+}
+

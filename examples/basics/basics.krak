@@ -1,0 +1,16 @@
+import io                       // we can import io
+import io:*                     // or everything in io
+import io: println, print       // or just one or two things from io
+
+fun add(a: int, b: int): int {
+    return a + b
+}
+
+fun main():int {
+    var verbose: int = add(1,2);
+    var less = add(1,2)
+    io::println(verbose)    // If we just import io, we then explicity go inside io's scope
+    println(less)           // if we imported println (or everything) we don't have to
+    return 0
+}
+

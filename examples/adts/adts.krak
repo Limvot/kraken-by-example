@@ -1,0 +1,29 @@
+import io:*
+
+adt could_be_an_int {
+    not_an_int,
+    an_int: int
+}
+
+fun gimmie(want_one: bool): could_be_an_int {
+    if (want_one)
+        return could_be_an_int::an_int(7)
+    return could_be_an_int::not_an_int()
+}
+
+fun test_it(it: could_be_an_int) {
+    match(it) {
+        could_be_an_int::not_an_int() println("not this time")
+        could_be_an_int::an_int(what_it_was) println(what_it_was)
+    }
+}
+
+fun main():int {
+    var is_it = gimmie(true)
+    var not_this = gimmie(false)
+    // Note that Kraken can infer semicolons on line endings
+    // but you can also put them in manually.
+    test_it(is_it); test_it(not_this)
+    return 0
+}
+

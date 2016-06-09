@@ -1,0 +1,28 @@
+import io:*
+import vector:*
+// gets us the vector wrapper function for different numbers of parameters
+import vector_literals:*
+
+fun id<T>(in: T): T {
+    return in;
+}
+
+fun main():int {
+    println(id<int>(5))
+    println(id(13.37))  // type inferencing again
+
+    // objects can be generic as well
+    var first_vector.construct(): vector<int>
+    first_vector.add(7)
+    println(first_vector.first())
+
+    // but this is cleaner, wrap it in a templated function
+    var second_vector = vector(13.37, 9000.1)
+    // note this sweet [] operator overloading
+    println(second_vector[1])
+
+    return 0
+}
+
+
+
