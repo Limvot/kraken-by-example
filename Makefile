@@ -28,15 +28,15 @@ all:
 	./setup-stage.sh
 	cargo run
 
-html: node_modules/gitbook
+html: node_modules/.bin/gitbook all
 	$(GITBOOK) build stage
 	./fix-edit-button.sh
 	./add-relinks.sh
 
-epub:	node_modules/gitbook
+epub:	node_modules/.bin/gitbook
 	$(GITBOOK) epub stage
 
-pdf:	node_modules/gitbook
+pdf:	node_modules/.bin/gitbook
 	$(GITBOOK) pdf stage
 
 clean:
@@ -47,8 +47,8 @@ test:
 	./check-line-length.sh
 	./check-links.sh
 
-serve: node_modules/gitbook
+serve: node_modules/.bin/gitbook
 	$(GITBOOK) serve stage
 
-node_modules/gitbook:
-	npm install gitbook@1.5.0
+node_modules/.bin/gitbook:
+	npm install gitbook-cli@2.3.2

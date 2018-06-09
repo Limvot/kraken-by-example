@@ -65,7 +65,7 @@ impl<'a, 'b> Markdown<'a, 'b> {
             match re.captures(line) {
                 None => {},
                 Some(captures) => {
-                    let src = captures.at(1).unwrap();
+                    let src = captures.get(1).unwrap().as_str();
                     let input = format!("{{{}}}", src);
                     let p = format!("examples/{}/{}/{}", prefix, id, src);
 
@@ -102,7 +102,7 @@ impl<'a, 'b> Markdown<'a, 'b> {
             match r.captures(line) {
                 None => {},
                 Some(captures) => {
-                    let src = captures.at(1).unwrap();
+                    let src = captures.get(1).unwrap().as_str();
                     let input = format!("{{{}.out}}", src);
                     let s = try!(file::run(prefix, id, src));
 
@@ -141,7 +141,7 @@ impl<'a, 'b> Markdown<'a, 'b> {
                         once_ = true;
                     }
 
-                    let srcbase = captures.at(1).unwrap();
+                    let srcbase = captures.get(1).unwrap().as_str();
                     let input = format!("{{{}.play}}", srcbase);
                     let src = format!("{}.krak", srcbase);
                     let p = format!("examples/{}/{}/{}", prefix, id, src);
