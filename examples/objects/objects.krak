@@ -1,4 +1,5 @@
 import io:*
+import vec:*
 
 // lets start simple
 obj basically_a_struct {
@@ -11,9 +12,6 @@ obj basically_a_struct {
 
 }
 
-import io:*
-import vector:*
-
 fun real_object(data: int): real_object {
     var to_ret.construct(): real_object
     to_ret.a.add(data)
@@ -21,7 +19,7 @@ fun real_object(data: int): real_object {
 }
 
 obj real_object (Object) {
-    var a: vector&lt;int&gt;
+    var a: vec&lt;int&gt;
     fun construct(): *real_object {
         a.construct()
         return this
